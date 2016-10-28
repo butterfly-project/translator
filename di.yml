@@ -14,6 +14,6 @@ services:
     arguments: ['%parameters/bfy.translates.language']
 
   bfy.translates.twig_extension:
-    class: 'Butterfly\Component\Translator\\TranslateTwigExtension'
+    class: 'Butterfly\Component\Translator\TranslateTwigExtension'
     arguments: ['@bfy.translator']
     tags: 'bfy_adapter.twig.extensions'
