@@ -1,0 +1,19 @@
+bfy.translates.language: 'default'
+bfy.translates.table: []
+
+services:
+
+  bfy.translator:
+    class: 'Butterfly\Component\Translator\Translator'
+    arguments: ['%parameters/bfy.translates.table', '@bfy.translates.language_environment.selected']
+
+  bfy.translates.language_environment.selected: { alias: 'bfy.translates.language_environment' }
+
+  bfy.translates.language_environment:
+    class: 'Butterfly\Component\Translator\StaticLanguageEnvironment'
+    arguments: ['%parameters/bfy.translates.language']
+
+  bfy.translates.twig_extension:
+    class: 'Butterfly\Component\Translator\\TranslateTwigExtension'
+    arguments: ['@bfy.translator']
+    tags: 'bfy_adapter.twig.extensions'
