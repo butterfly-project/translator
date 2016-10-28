@@ -1,0 +1,25 @@
+{
+    "name": "butterfly/translator",
+    "type": "library",
+    "description": "Butterfly PHP. Translator Component",
+    "keywords": ["Translator"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marat Fakhertdinov",
+            "email": "marat.fakhertdinov@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Butterfly\\Component\\Translator\\": "src/",
+            "Butterfly\\Component\\Translator\\Tests\\": "tests/unit/"
+        }
+    }
+}
